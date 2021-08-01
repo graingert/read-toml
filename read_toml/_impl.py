@@ -2,10 +2,9 @@ import io
 import sys
 
 if False:
-    from typing import Any
+    from typing import IO, Any
     from typing import Dict as dict
 
-    from typing import IO
     from _typeshed import AnyPath as StrOrBytesPath
 
 __all__ = ["TOMLDecodeError", "read_toml"]
