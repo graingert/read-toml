@@ -21,6 +21,7 @@ classifiers = [
 
 [tool.flit.metadata.requires-extra]
 test = ["pytest", "pytest-forward-compatability", "pytest-cov", "coverage>=5.3"]
+mypy = ["mypy >= 0.910"]
 
 
 [tool.tox]
@@ -38,8 +39,12 @@ requires=
 [testenv]
 wheel = true
 wheel_build_env = build
-extras= test
-commands = pytest []
+extras =
+    test
+    mypy: mypy
+commands =
+    python: pytest []
+    mypy: mypy .
 
 [testenv:build]
 
@@ -49,3 +54,8 @@ deps =
 commands =
     python -m flit publish
 """
+
+
+[tool.mypy]
+strict = true
+warn_unused_configs = true
