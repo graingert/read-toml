@@ -21,7 +21,7 @@ classifiers = [
 
 [tool.flit.metadata.requires-extra]
 test = ["pytest", "pytest-forward-compatability", "pytest-cov", "coverage>=5.3"]
-mypy = ["mypy >= 0.910"]
+mypy = ["mypy"]
 
 
 [tool.tox]

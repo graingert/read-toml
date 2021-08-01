@@ -23,7 +23,7 @@ jobs:
           pip install tox tox-venv
 
       - name: Run tests
-        run: tox -e python
+        run: tox -e python,mypy
 
   publish:
     runs-on: ubuntu-latest
