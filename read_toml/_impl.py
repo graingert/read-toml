@@ -2,8 +2,10 @@ import io
 import sys
 
 if False:
-    from _typeshed import AnyPath as StrOrBytesPath, SupportsRead
     from typing import Any
+
+    from _typeshed import AnyPath as StrOrBytesPath
+    from _typeshed import SupportsRead
 
 __all__ = ["TOMLDecodeError", "read_toml"]
 

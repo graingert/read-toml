@@ -1,4 +1,5 @@
 import sys
+
 from read_toml import read_toml
 
 if sys.version_info >= (3, 4):
@@ -8,7 +9,7 @@ else:
 
 
 def test_read(
-    tmp_path, # type: pathlib.Path
+    tmp_path,  # type: pathlib.Path
 ):
     # type: (...) -> None
     f = tmp_path / "pyproject.toml"
