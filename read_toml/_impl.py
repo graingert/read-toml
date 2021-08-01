@@ -6,7 +6,7 @@ if False:
     from typing import Dict as dict
 
     from _typeshed import AnyPath as StrOrBytesPath
-    from _typeshed import SupportsRead
+    from _typeshed import IO
 
 __all__ = ["TOMLDecodeError", "read_toml"]
 
@@ -15,12 +15,12 @@ if sys.version_info < (3, 6):
     from toml import load as _toml_load_str
 
     def _toml_load_bytes(
-        f,  # type: SupportsRead[bytes]
+        f,  # type: IO[bytes]
     ):
         # type: (...) -> dict[str, Any]
         w = io.TextIOWrapper(f, encoding="utf8", newline="")
         try:
-            return _toml_load_str(w)
+            return dict(_toml_load_str(w))
         finally:
             w.detach()
 
