@@ -16,8 +16,8 @@ if sys.version_info < (3, 6):
 
     from toml import TomlDecodeError as TOMLDecodeError
 else:
-    from tomli import load as _toml_load_bytes
     from tomli import TOMLDecodeError
+    from tomli import load as _toml_load_bytes
 
 
 def read_toml(path):
