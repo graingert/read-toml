@@ -5,8 +5,8 @@ if False:
     from typing import Any
     from typing import Dict as dict
 
-    from _typeshed import AnyPath as StrOrBytesPath
     from _typeshed import IO
+    from _typeshed import AnyPath as StrOrBytesPath
 
 __all__ = ["TOMLDecodeError", "read_toml"]
 
