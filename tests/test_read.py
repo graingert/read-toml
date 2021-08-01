@@ -7,7 +7,10 @@ else:
     import pathlib2 as pathlib
 
 
-def test_read(tmp_path: pathlib.Path) -> None:
+def test_read(
+    tmp_path, # type: pathlib.Path
+):
+    # type: (...) -> None
     f = tmp_path / "pyproject.toml"
     f.write_bytes(b"")
     assert read_toml(str(f)) == {}
