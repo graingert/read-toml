@@ -2,7 +2,7 @@ import io
 import sys
 
 if False:
-    from typing import Any
+    from typing import Any, Dict as dict
 
     from _typeshed import AnyPath as StrOrBytesPath
     from _typeshed import SupportsRead
