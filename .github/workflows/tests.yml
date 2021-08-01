@@ -20,7 +20,7 @@ jobs:
 
       - name: Install Tox
         run: |
-          pip install tox tox-venv
+          pip install tox
 
       - name: Run tests
         run: tox -e python
@@ -40,7 +40,7 @@ jobs:
 
       - name: Install Tox
         run: |
-          pip install tox tox-venv
+          pip install tox
 
       - name: Publish to PyPI
         run: tox -e release
